@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class SGrade
+{
+   public static void main(String[] args)
+   {
+      Scanner sc=new Scanner(System.in);
+      int sub,total=0,i,marks;
+      double avgPer;
+      System.out.println("Enter the number of subjects");
+      sub=sc.nextInt();
+      for(i=1;i<=sub;i++)
+      {
+        System.out.println("Enter the marks obtained in subject number "+i+" out of 100");
+        marks=sc.nextInt();
+        total=total+marks;
+      }
+      System.out.println("Total marks are : " +total);
+      avgPer=(double) (total/sub);
+      System.out.println("Average Percentage is: " +avgPer);
+      char grade;
+      if(avgPer>=90)
+      {
+        grade='O';
+      }
+      else if(avgPer>=80)
+      {
+        grade='A';
+      }
+      else if(avgPer>=70)
+      {
+        grade='B';
+      }
+      else if(avgPer>=60)
+      {
+        grade='C';
+      }
+      else if(avgPer>=50)
+      {
+        grade='D';
+      }
+      else
+      {
+        grade='F';
+      }
+     System.out.println("Grade is: "+grade);
+   }
+}
